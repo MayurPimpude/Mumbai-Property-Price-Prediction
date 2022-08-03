@@ -1,7 +1,7 @@
 #from importlib.resources import path
 import pickle
 import json
-import os
+#import os
 import warnings
 warnings.filterwarnings(action='ignore')
 import numpy as np
@@ -51,6 +51,8 @@ def load_saved_artifacts():
 
 def get_data_columns():
     return __data_columns
+
+#os.chdir('ML/data/columns.json')
 
 if __name__== '__main__':
     load_saved_artifacts()
