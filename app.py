@@ -45,16 +45,16 @@ def get_location():
     return response
 
 
-@app.route('/pre', methods=['GET', 'POST'])
-def pre():
-    model = pickle.load(open('data/mumbai.pickle', 'rb'))
+# @app.route('/pre', methods=['GET', 'POST'])
+# def pre():
+#     model = pickle.load(open('data/mumbai.pickle', 'rb'))
 
-    price = jsonify({
-        'estimated_price': get_estimated_price('worli', 500, 1, 0, 0)
-    })
+#     price = jsonify({
+#         'estimated_price': get_estimated_price('worli', 500, 1, 0, 0)
+#     })
 
-    print(price)
-    return price
+#     print(price)
+#     return price
 
 
 @app.route('/predict', methods=['GET', 'POST'])
@@ -86,7 +86,7 @@ def predictor():
 
         price =  get_estimated_price(Locations,sqft,BHK,gym,lift)
         
-        message = price
+        # message = price
         
         return render_template("predict.html",message='Price Of House is {} lakhs'.format(price))
         
