@@ -44,18 +44,27 @@
             color: black;
             border: 1px solid;
         }
+
+        .message{
+            background:#122754;
+            text-align: center;
+            color: aliceblue;
+            font-size: 25px;
+        }
     </style>
 
 </head>
 
 <body>
     <section class="Form my-5 mx-5">
+        {% if warning %}
         <div class="alert alert-info alert-dismissible fade show" role="alert">
             <strong>Note !</strong> You should fill yes or no in gym and lift.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
+        {% endif %}
         <div class="container mb-5">
             <div class="row no-gutters">
                 <div class="col-lg-5 mt-5">
@@ -109,12 +118,8 @@
 
     <form action="post" class="mt-2">
         {% if message %}
-            <div class="alert alert-info text-center text-white alert-dismissible fade show" role="alert"
-                style="background:rgb(2, 99, 147) ;">
+            <div class="message">
                 <p>{{message}}</p>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
             {% endif %}
     </form>

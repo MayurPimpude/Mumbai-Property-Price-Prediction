@@ -90,7 +90,7 @@ def predictor():
         
         return render_template("predict.html",message='Price Of House is {} lakhs'.format(price))
         
-    return render_template("predict.html")
+    return render_template("predict.html",warning='12')
 
     #  return render_template("predict.html",predict_text='Price Of House is {} lakhs'.format(output))
 

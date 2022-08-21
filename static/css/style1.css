@@ -36,6 +36,11 @@
     color: #ffffff;
   }
 
+  .navbar a{
+    color: #ffffff;
+    text-align: center;
+  }
+
   .slider-area{
     background: rgb(87, 87, 87);
     padding: 50px;
